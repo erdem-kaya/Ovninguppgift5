@@ -1,20 +1,17 @@
 ﻿
 using MainApp.Dtos;
+using MainApp.Interfaces;
 using MainApp.Models;
 
-namespace MainApp.Factories
+namespace MainApp.Interfaces
 {
-    public  class ProductFactory
+    public class ProductFactory : IProductFactory
     {
         private static int _idCounter = 0;
-        public ProductDto Create()
-        {
-            return new();
-        }
 
         public Product Create(ProductDto productDto)
         {
-            return new()
+            return new Product
             {
                 Id = _idCounter++,
                 Name = productDto.Name,

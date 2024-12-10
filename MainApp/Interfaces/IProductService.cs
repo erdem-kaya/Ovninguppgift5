@@ -5,7 +5,7 @@ namespace MainApp.Interfaces
 {
     public interface IProductService
     {
-        bool AppProduct(ProductDto productDto);
+        bool AddProduct(ProductDto productDto);
         Product GetProductById(int id);
         List<Product> GetAllProducts();
 
